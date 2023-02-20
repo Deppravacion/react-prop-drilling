@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import './App.css'
-import { INIT_MESSAGE } from './constants.js'
-import { ALTERNATE_MESSAGE } from './constants.js'
 import Parentcomp from './Parentcomp'
 
 class App extends Component {
@@ -31,27 +29,30 @@ class App extends Component {
 
   resetState = () => {
     this.setState({
-      message: INIT_MESSAGE,
+      message: '',
+      submarine: {
+        minDepth: '',
+        maxDepth: ''
+      }
     })
   }
-
-
 render() {
   return(
     <div>
-      <h1>app</h1>
-      
-      <Parentcomp      
-      message={this.state.message}       
+      <h1>What's in your Prop Drilling Toolkit ?</h1>    
+        <h3> State items: </h3>
+      <div className="stateWrapper">
+        message: {this.state.message}  <br />
+       minDepth: {this.state.submarine.minDepth}   <br />
+       maxDepth: {this.state.submarine.maxDepth}  <br />
+      </div>  
+      <Parentcomp           
       changeState={this.changeState}
       updateSubState={this.updateSubState}
       resetState={this.resetState}
       />
-
     </div>
   )
 }
-
 }
-
 export default App

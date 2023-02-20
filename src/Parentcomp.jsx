@@ -4,17 +4,21 @@ import Childcomp from './Childcomp'
 
 class Parentcomp extends Component {
     render() {
-        const { message, resetState, changeState } = this.props
+        // const { changeState } = this.props
         return(
-            <>               
+            <>
+                <div className='parentHeader'>
+                   <h4> This parent Container is only passing props from the App component to the Child component</h4>
+                   <p>:: changeState:: </p>
+                   <p>:: updateSubState :: </p>
+                   <p>:: resetState :: </p>
+                </div>               
                 <Childcomp               
-                changeState={this.props.changeState}
-                message={message}      
-                updateSubState={this.props.updateSubState}   
+                changeState={this.props.changeState}               
+                updateSubState={this.props.updateSubState} 
+                resetState={this.props.resetState} 
                 />
-                <button onClick={this.props.resetState}>
-                    reset state
-                </button>
+             
             </>
         )
     }
