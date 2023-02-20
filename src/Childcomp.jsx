@@ -11,6 +11,7 @@ class Childcomp extends Component {
         return(            
             <div className="childWrapper">
                 <h3>Our Child holds the buttons and can effectively handle state through to the App component</h3>
+                
                 <div className="buttonWrapper">
                     <button               
                     // onClick={() => this.props.message('message', ALTERNATE_MESSAGE)} //anonymous method

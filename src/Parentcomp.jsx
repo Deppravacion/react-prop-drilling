@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import Childcomp from './Childcomp'
 
-
 class Parentcomp extends Component {
     render() {
-        // const { changeState } = this.props
         return(
             <>
                 <div className='parentHeader'>
@@ -17,8 +15,7 @@ class Parentcomp extends Component {
                 changeState={this.props.changeState}               
                 updateSubState={this.props.updateSubState} 
                 resetState={this.props.resetState} 
-                />
-             
+                />             
             </>
         )
     }
